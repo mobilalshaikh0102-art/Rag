@@ -1,0 +1,46 @@
+run: python rag_policy_qa.py
+
+
+PS C:\Users\disha\RAG\Assessment\Session B\Task 4> python rag_policy_qa.py
+Total chunks created: 5
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|██████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 2041.85it/s]
+============================================================
+RETRIEVED CHUNKS
+============================================================
+[Chunk 1]
+Our food delivery platform is committed to ensuring a smooth and transparent experience for every customer. This policy outlines our rules for refunds, delivery windows, and order cancellations so you know exactly what to expect when something goes wrong with your order. Refund Policy: If you receive a missing item, a wrong item, or food that arrives in poor condition, you are eligible for a full or partial refund depending on the nature of the issue. Missing item complaints must be reported within 24 hours of delivery through the app's Help section. Once reported, our support team will review the
+
+[Chunk 2]
+be reported within 24 hours of delivery through the app's Help section. Once reported, our support team will review the order details and issue a refund to your original payment method within 5 to 7 business days. Refunds for wrong items follow the same 24-hour reporting window. Refunds for poor food quality require a photo of the item and are reviewed on a case-by-case basis. Refunds are not issued for change-of-mind cancellations after the restaurant has begun preparing the order. Delivery Window Policy: Standard delivery windows range from 30 to 45 minutes from the time the restaurant confirms the order,
+
+[Chunk 3]
+up by a delivery partner, it can no longer be cancelled. If a restaurant is unable to fulfill an order due to closure or item unavailability, the order will be automatically cancelled and fully refunded without any action required from the customer. For repeated cancellations that appear abusive, our platform reserves the right to restrict cancellation privileges on the account.
+
+============================================================
+ASSEMBLED PROMPT
+============================================================
+You are a helpful assistant that answers customer questions about food delivery policies using only the information provided below.
+
+----- Retrieved Context -----
+[Context 1]
+Our food delivery platform is committed to ensuring a smooth and transparent experience for every customer. This policy outlines our rules for refunds, delivery windows, and order cancellations so you know exactly what to expect when something goes wrong with your order. Refund Policy: If you receive a missing item, a wrong item, or food that arrives in poor condition, you are eligible for a full or partial refund depending on the nature of the issue. Missing item complaints must be reported within 24 hours of delivery through the app's Help section. Once reported, our support team will review the
+
+[Context 2]
+be reported within 24 hours of delivery through the app's Help section. Once reported, our support team will review the order details and issue a refund to your original payment method within 5 to 7 business days. Refunds for wrong items follow the same 24-hour reporting window. Refunds for poor food quality require a photo of the item and are reviewed on a case-by-case basis. Refunds are not issued for change-of-mind cancellations after the restaurant has begun preparing the order. Delivery Window Policy: Standard delivery windows range from 30 to 45 minutes from the time the restaurant confirms the order,
+
+[Context 3]
+up by a delivery partner, it can no longer be cancelled. If a restaurant is unable to fulfill an order due to closure or item unavailability, the order will be automatically cancelled and fully refunded without any action required from the customer. For repeated cancellations that appear abusive, our platform reserves the right to restrict cancellation privileges on the account.
+
+----- User Question -----
+What is the refund policy for missing items?
+
+----- Instruction -----
+Answer the question using ONLY the context provided above. Do not use outside knowledge. If the answer is not present in the context, respond with "I don't know."
+
+============================================================
+SIMULATED ANSWER
+============================================================
+[Simulated LLM Answer] Missing item complaints must be reported within 24 hours of delivery via the app's Help section. Once reported, a refund is issued to your original payment method within 5 to 7 business days.
+PS C:\Users\disha\RAG\Assessment\Session B\Task 4> 

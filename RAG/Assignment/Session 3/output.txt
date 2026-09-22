@@ -1,0 +1,62 @@
+run: python3 vector_db_retrieval.py
+
+
+
+
+(venv) PS C:\Users\disha\RAG\Assignment\Session 3> python vector_db_retrieval.py 
+======================================================================
+TASK 1: FAISS index with 5 song embeddings (4-D)
+======================================================================
+Songs indexed: ['Blinding Lights', 'Shape of You', 'Levitating', 'Bad Guy', 'Someone Like You']
+Embeddings:
+ [[0.37454012 0.9507143  0.7319939  0.5986585 ]
+ [0.15601864 0.15599452 0.05808361 0.8661761 ]
+ [0.601115   0.7080726  0.02058449 0.96990985]
+ [0.83244264 0.21233912 0.18182497 0.1834045 ]
+ [0.30424225 0.52475643 0.43194503 0.29122913]]
+
+Index size (index.ntotal): 5
+Vector dimension (index.d): 4
+
+======================================================================
+TASK 2: ChromaDB restaurant similarity search (3-D)
+======================================================================
+Query vector: [0.6704675101784022, 0.41730480236712697, 0.5586898284457517]
+
+Most similar restaurant: Haldiram's
+Distance score: 0.0333
+
+======================================================================
+TASK 3: FAISS top-2 movie search from a text query
+======================================================================
+Query: 'action movie'
+Top 2 most similar movies:
+  1. John Wick (distance: 0.3683)
+  2. Die Hard (distance: 0.5488)
+
+======================================================================
+TASK 4: ChromaDB Instagram caption similarity search
+======================================================================
+Query: 'Weekend vibes'
+Top 3 most similar captions:
+  - Coffee, calm, and Sunday mornings  (distance: 0.2878)
+  - Chasing sunsets and good vibes  (distance: 0.3624)
+  - Beach hair, don't care  (distance: 0.4977)
+
+How retrieval works here: ChromaDB compares the query's vector against every stored caption vector and returns the captions whose vectors sit closest to it in embedding space, i.e. the ones 'meaning' something similar to the query.
+
+======================================================================
+TASK 5: FAISS Flipkart-style product similarity search
+======================================================================
+Product catalog:
+  - boAt Rockerz 450 Wireless Bluetooth Headphones with 15H Playback
+  - Samsung Galaxy M14 5G Smartphone, 128GB Storage, 6000mAh Battery
+  - Prestige Electric Kettle 1.5L with Auto Shut-Off, Stainless Steel
+  - HP 15s Laptop, Intel i5 12th Gen, 8GB RAM, 512GB SSD
+  - Fastrack Reflex Smartwatch with Heart Rate Monitor and SpO2 Tracking
+
+Query: 'wireless headphones'
+Most similar product: boAt Rockerz 450 Wireless Bluetooth Headphones with 15H Playback
+Distance: 0.8377
+(venv) PS C:\Users\disha\RAG\Assignment\Session 3> 
+

@@ -1,0 +1,43 @@
+
+
+Task 1 — What is RAG?
+
+Retrieval-Augmented Generation (RAG) is a technique where an LLM's answer is grounded in information pulled from an external, up-to-date knowledge source at the moment of the query, instead of relying only on what the model memorized during training. The flow is: take the user's question → search a document store (often a vector database) for the most relevant pieces of text → hand those pieces to the LLM along with the question → let the LLM generate an answer using that fresh context.
+
+Example — Zomato: Zomato's LLM was trained on data up to some cutoff date, so it wouldn't know a restaurant's current menu, today's offers, or whether it's open right now. With RAG, when you ask "Does this restaurant have a vegan Thali today?", the app retrieves the restaurant's live menu/inventory data and feeds it to the LLM, which then answers accurately instead of guessing from stale training data.
+
+
+
+
+Task 2 — A 2022-trained travel bot on IRCTC/IPL 2024
+
+Three questions it would struggle with:
+
+"What is the IRCTC Tatkal booking timing update introduced in 2024?" — any policy changes after 2022 wouldn't exist in its training data.
+"Who won the IPL 2024 final and who was the top scorer?" — the event hadn't happened yet at training time.
+"Is the new Vande Bharat route between [City A] and [City B] launched in 2024 available for booking?" — new train routes launched after the cutoff are simply unknown to it.
+
+Why this is a problem: the model doesn't know that it doesn't know — it will often confidently guess or extrapolate from old patterns rather than say "I don't have this information," leading to plausible-sounding but wrong answers (hallucination). This is exactly the failure mode RAG is designed to fix, by pulling in current IRCTC/IPL data at query time instead of depending on frozen training knowledge.
+
+
+
+Task 3 — RAG workflow diagram
+
+The diagram shows the core RAG loop: the user query goes to a retriever, which pulls relevant chunks from a vector index; those chunks plus the original query are combined into a prompt for the LLM; the LLM then generates the final answer. If you need this for a hand-drawn submission, just redraw these five boxes with arrows in the same order.
+              Vector index
+                    | 
+User query -> Retrieve docs -> Combine with LLM context + query Prompt -> Final Answer
+
+
+
+Task 4 — RAG vs Fine-tuning vs Prompt Engineering
+
+
+
+
+
+
+
+Task 5 — A real-world RAG example (found via AI search)
+
+Notion AI uses RAG for its Q&A feature: when you ask a question inside your Notion workspace, it doesn't rely purely on the base LLM's training — it retrieves relevant blocks, pages, and databases from your specific workspace and feeds them to the model as context before generating an answer. This lets it answer questions like "What did we decide about the Q3 roadmap?" accurately, using your team's actual private documents, rather than guessing from generic training data. This is the same core pattern as the diagram above, just applied to personal/workspace knowledge instead of a public policy doc.

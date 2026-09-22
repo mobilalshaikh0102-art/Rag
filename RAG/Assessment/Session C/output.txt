@@ -1,0 +1,105 @@
+run: python help_desk_chatbot.py
+
+
+
+PS C:\Users\disha\RAG\Assessment\Session C> python help_desk_chatbot.py
+Loading embedding model and building indexes... please wait.
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|██████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 3318.25it/s]
+Policy document loaded: 505 words -> 7 chunks indexed.
+
+
+============================================================
+FOOD DELIVERY HELP DESK CHATBOT
+============================================================
+1. Ask a policy question (RAG)
+2. Classify a complaint (Few-Shot)
+3. Exit
+Select an option (1-3): 1
+
+Enter your policy question: what is the refund policy for missing items?
+
+----- Retrieved Chunks -----
+[Chunk 1]
+Our food delivery platform is committed to ensuring a smooth, fair, and transparent experience for every customer. This policy explains our rules for refunds, order cancellations, and delivery windows so you always know what to expect if something goes wrong with your order. Refund Policy: If you receive a missing item, a wrong item, or food that arrives in poor condition, you may be eligible for a full or partial refund depending on the nature of the issue. Missing item complaints must be reported within 24 hours of delivery through the app's Help section. Once reported, our support team reviews
+
+[Chunk 2]
+which case a refund will be issued. Order Cancellation Policy: Orders can be cancelled free of charge within 5 minutes of being placed, as long as the restaurant has not yet begun preparation. After this window, cancellation may incur a partial charge to cover ingredients and preparation costs already incurred by the restaurant. Once an order has been picked up by a delivery partner, it can no longer be cancelled through the app and customers should contact support directly. If a restaurant is unable to fulfill an order due to closure, high demand, or item unavailability, the order will be
+
+[Chunk 3]
+complaints must be reported within 24 hours of delivery through the app's Help section. Once reported, our support team reviews the order details and, if approved, issues a refund to your original payment method within 5 to 7 business days. Refunds for wrong items follow the same 24-hour reporting window and require the customer to confirm the incorrect item received. Refunds for poor food quality require a photo of the item and are reviewed on a case-by-case basis by our quality team. Refunds are not issued for change-of-mind cancellations placed after the restaurant has already begun preparing the order. Repeated   
+
+----- Assembled RAG Prompt -----
+You are a helpful assistant that answers customer questions about food delivery policies using only the information provided below.
+
+----- Retrieved Context -----
+[Context 1]
+Our food delivery platform is committed to ensuring a smooth, fair, and transparent experience for every customer. This policy explains our rules for refunds, order cancellations, and delivery windows so you always know what to expect if something goes wrong with your order. Refund Policy: If you receive a missing item, a wrong item, or food that arrives in poor condition, you may be eligible for a full or partial refund depending on the nature of the issue. Missing item complaints must be reported within 24 hours of delivery through the app's Help section. Once reported, our support team reviews
+
+[Context 2]
+which case a refund will be issued. Order Cancellation Policy: Orders can be cancelled free of charge within 5 minutes of being placed, as long as the restaurant has not yet begun preparation. After this window, cancellation may incur a partial charge to cover ingredients and preparation costs already incurred by the restaurant. Once an order has been picked up by a delivery partner, it can no longer be cancelled through the app and customers should contact support directly. If a restaurant is unable to fulfill an order due to closure, high demand, or item unavailability, the order will be
+
+[Context 3]
+complaints must be reported within 24 hours of delivery through the app's Help section. Once reported, our support team reviews the order details and, if approved, issues a refund to your original payment method within 5 to 7 business days. Refunds for wrong items follow the same 24-hour reporting window and require the customer to confirm the incorrect item received. Refunds for poor food quality require a photo of the item and are reviewed on a case-by-case basis by our quality team. Refunds are not issued for change-of-mind cancellations placed after the restaurant has already begun preparing the order. Repeated   
+
+----- User Question -----
+what is the refund policy for missing items?
+
+----- Instruction -----
+Answer the question using ONLY the context provided above. Do not use outside knowledge. If the answer is not present in the context, respond with "I don't know."
+
+----- Simulated Answer -----
+[Simulated Answer] (This is where the LLM's response would appear.)
+
+============================================================
+FOOD DELIVERY HELP DESK CHATBOT
+============================================================
+1. Ask a policy question (RAG)
+2. Classify a complaint (Few-Shot)
+3. Exit
+Select an option (1-3): 2
+
+Enter the complaint text to classify: My order showed up 50 minutes late and the driver didn't answer calls.
+
+----- Few-Shot Classification Prompt -----
+You are a classifier that categorizes food delivery complaints into exactly one of the following categories: Late Delivery, Wrong Item, Missing Item, Poor Quality.
+Read the complaint and respond with only the category name.
+
+Input: My food arrived almost an hour after the promised time.
+Output: Late Delivery
+
+Input: I ordered a chicken burger but received a veg burger instead.
+Output: Wrong Item
+
+Input: One of the drinks I paid for was not in the bag.
+Output: Missing Item
+
+Input: The pizza was cold and soggy when it arrived.
+Output: Poor Quality
+
+Input: My order showed up 50 minutes late and the driver didn't answer calls.
+Output:
+
+----- Prediction -----
+Predicted Category : Late Delivery
+Closest Example    : "My food arrived almost an hour after the promised time."
+
+============================================================
+FOOD DELIVERY HELP DESK CHATBOT
+============================================================
+1. Ask a policy question (RAG)
+2. Classify a complaint (Few-Shot)
+3. Exit
+Select an option (1-3): 3
+
+============================================================
+SESSION SUMMARY
+============================================================
+Policy questions asked : 1
+Complaints classified   : 1
+Session log saved to    : C:\Users\disha\RAG\Assessment\Session C\session_log.txt
+Goodbye!
+PS C:\Users\disha\RAG\Assessment\Session C> 
+
+

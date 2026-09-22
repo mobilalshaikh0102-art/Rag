@@ -1,0 +1,28 @@
+# Customer Support Chatbot Dependencies
+# Python 3.8+
+
+# Core LLM Integration
+anthropic==0.28.0
+
+# Web Framework (for API)
+flask==3.0.0
+flask-cors==4.0.0
+
+# Data Validation
+pydantic==2.5.0
+
+# Testing
+pytest==7.4.3
+pytest-cov==4.1.0
+
+# Utilities
+python-dotenv==1.0.0
+requests==2.31.0
+
+# Production Server
+gunicorn==21.2.0
+python-json-logger==2.0.7
+
+# Monitoring
+opentelemetry-api==1.21.0
+opentelemetry-sdk==1.21.0

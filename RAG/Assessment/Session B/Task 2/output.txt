@@ -1,0 +1,70 @@
+run: python few_shot_classifier.py
+
+
+PS C:\Users\disha\RAG\Assessment\Session B\Task 2> python few_shot_classifier.py
+============================================================
+TEST CASE 1
+============================================================
+You are a classifier that categorizes food delivery complaints into exactly one of the following categories: Late Delivery, Wrong Item, Missing Item, Poor Quality.
+Read the complaint and respond with only the category name.
+
+Input: My food arrived almost an hour after the promised time.
+Output: Late Delivery
+
+Input: I ordered a chicken burger but received a veg burger instead.
+Output: Wrong Item
+
+Input: One of the drinks I paid for was not in the bag.
+Output: Missing Item
+
+Input: The pizza was cold and soggy when it arrived.
+Output: Poor Quality
+
+Input: The delivery guy handed me someone else's order entirely.
+Output:
+
+============================================================
+TEST CASE 2
+============================================================
+You are a classifier that categorizes food delivery complaints into exactly one of the following categories: Late Delivery, Wrong Item, Missing Item, Poor Quality.
+Read the complaint and respond with only the category name.
+
+Input: My food arrived almost an hour after the promised time.
+Output: Late Delivery
+
+Input: I ordered a chicken burger but received a veg burger instead.
+Output: Wrong Item
+
+Input: One of the drinks I paid for was not in the bag.
+Output: Missing Item
+
+Input: The pizza was cold and soggy when it arrived.
+Output: Poor Quality
+
+Input: My order took over 90 minutes and the driver never called.
+Output:
+
+============================================================
+TEST CASE 3 (after add_example call)
+============================================================
+You are a classifier that categorizes food delivery complaints into exactly one of the following categories: Late Delivery, Wrong Item, Missing Item, Poor Quality.
+Read the complaint and respond with only the category name.
+
+Input: My food arrived almost an hour after the promised time.
+Output: Late Delivery
+
+Input: I ordered a chicken burger but received a veg burger instead.
+Output: Wrong Item
+
+Input: One of the drinks I paid for was not in the bag.
+Output: Missing Item
+
+Input: The pizza was cold and soggy when it arrived.
+Output: Poor Quality
+
+Input: The fries were stale and clearly not freshly made.
+Output: Poor Quality
+
+Input: I received someone else's bag with a different restaurant's food.
+Output:
+PS C:\Users\disha\RAG\Assessment\Session B\Task 2> 

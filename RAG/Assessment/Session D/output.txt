@@ -1,0 +1,69 @@
+run : python rag_refund_qa_fixed.py
+
+
+
+PS C:\Users\disha\RAG\Assessment\Session D> ^C
+PS C:\Users\disha\RAG\Assessment\Session D> python rag_refund_qa_fixed.py
+Loading embedding model and policy file... please wait.
+
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|██████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 1397.66it/s]
+Loaded 'refund_policy.txt' -> 8 sentence-safe chunks indexed.
+
+Ask a question about the refund policy (type 'quit' to exit).
+
+> Is there a fee for cancelling my order?
+
+----- Retrieved Chunks -----
+[Chunk 1] Section 3: Non-Refundable Situations Refunds are not issued for change-of-mind cancellations placed after the restaurant has already begun preparing the order. Refunds are also not issued if a customer simply disliked the taste of a correctly prepared item, as this is considered a subjective preference rather than an order error.
+
+[Chunk 2] For example, if one item out of a multi-item order was missing, the customer is refunded only for the value of the missing item plus any associated delivery fee proportion, not the entire order total. Partial refunds are also applied when a substituted item was accepted by the customer but was of lower value than the original item ordered.
+
+----- Assembled RAG Prompt -----
+You are a helpful assistant that answers customer questions about the food delivery refund policy using only the context below.
+
+----- Retrieved Context -----
+[Context 1]
+Section 3: Non-Refundable Situations Refunds are not issued for change-of-mind cancellations placed after the restaurant has already begun preparing the order. Refunds are also not issued if a customer simply disliked the taste of a correctly prepared item, as this is considered a subjective preference rather than an order error.
+
+[Context 2]
+For example, if one item out of a multi-item order was missing, the customer is refunded only for the value of the missing item plus any associated delivery fee proportion, not the entire order total. Partial refunds are also applied when a substituted item was accepted by the customer but was of lower value than the original item ordered.
+
+----- User Question -----
+Is there a fee for cancelling my order?
+
+----- Instruction -----
+Answer the question using ONLY the context provided above. Do not use outside knowledge. If the answer is not present in the context, respond with "I don't know."
+
+----- Simulated Answer -----
+[Simulated Answer] (This is where the LLM's real response would appear.)
+
+> What is your return policy for electronics?
+
+----- Retrieved Chunks -----
+[Chunk 1] Food Delivery Refund Policy Section 1: Eligibility for Refunds Customers are eligible for a refund if they receive a missing item, a wrong item, or food that arrives in visibly poor condition. Missing item complaints must be reported within 24 hours of delivery through the app's Help section.
+
+[Chunk 2] Orders that were delivered successfully to the address provided by the customer, but which the customer was unavailable to receive, are not eligible for a refund. Section 4: Partial Refunds In some cases, only a partial refund is issued.   
+
+----- Assembled RAG Prompt -----
+You are a helpful assistant that answers customer questions about the food delivery refund policy using only the context below.
+
+----- Retrieved Context -----
+[Context 1]
+Food Delivery Refund Policy Section 1: Eligibility for Refunds Customers are eligible for a refund if they receive a missing item, a wrong item, or food that arrives in visibly poor condition. Missing item complaints must be reported within 24 hours of delivery through the app's Help section.
+
+[Context 2]
+Orders that were delivered successfully to the address provided by the customer, but which the customer was unavailable to receive, are not eligible for a refund. Section 4: Partial Refunds In some cases, only a partial refund is issued.
+
+----- User Question -----
+What is your return policy for electronics?
+
+----- Instruction -----
+Answer the question using ONLY the context provided above. Do not use outside knowledge. If the answer is not present in the context, respond with "I don't know."
+
+----- Simulated Answer -----
+[Simulated Answer] (This is where the LLM's real response would appear.)
+
+> quit
+Goodbye!
+PS C:\Users\disha\RAG\Assessment\Session D> 

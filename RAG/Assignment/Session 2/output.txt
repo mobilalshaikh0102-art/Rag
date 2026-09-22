@@ -1,0 +1,135 @@
+run: python3 chunking_embeddings.py
+
+
+
+PS C:\Users\disha\RAG\Assignment\Session 2> python chunking_embeddings.py
+>> 
+======================================================================
+TASK 1: chunk_text() demo on ~500-word sample text
+======================================================================
+Sample text word count: 544
+
+Number of chunks produced (chunk_size=100, overlap=20): 7
+
+--- Chunk 1 (100 words) ---
+The history of computing spans several centuries, beginning long before the invention of electronic machines. Early humans used simple tools such as tally sticks and the abacus to keep track of numbers and perform basic arithmetic. These devices, while primitive, represented the first attempts to externalize calculation, allowing people to solve problems that would have been difficult to manage using memory alone. Over time, mechanical calculating devices became more sophisticated, culminating in inventions such as Blaise Pascal's mechanical calculator in the seventeenth century and Charles Babbage's Analytical Engine in the nineteenth century, which is often considered a conceptual ancestor of
+
+--- Chunk 2 (100 words) ---
+the seventeenth century and Charles Babbage's Analytical Engine in the nineteenth century, which is often considered a conceptual ancestor of the modern computer. The twentieth century brought rapid advances that transformed computing from a mechanical curiosity into a foundational technology of modern life. The development of the vacuum tube enabled the construction of the first electronic computers, such as ENIAC, which could perform calculations at speeds unimaginable to earlier mechanical devices. These early machines were enormous, consumed vast amounts of power, and required teams of engineers to operate and maintain. Despite their limitations, they proved that electronic computation was not
+
+--- Chunk 3 (100 words) ---
+power, and required teams of engineers to operate and maintain. Despite their limitations, they proved that electronic computation was not only possible but practical for solving complex problems in science, engineering, and defense. The invention of the transistor in the middle of the twentieth century marked a turning point. Transistors were smaller, more reliable, and far more energy efficient than vacuum tubes, and they paved the way for the integrated circuit. Integrated circuits allowed engineers to place many transistors onto a single chip, dramatically increasing computing power while shrinking the physical size of machines. This period saw the rise of
+
+--- Chunk 4 (100 words) ---
+a single chip, dramatically increasing computing power while shrinking the physical size of machines. This period saw the rise of mainframe computers used by large corporations and governments, followed by the minicomputer, which brought computing capability to smaller organizations and research labs. The personal computer revolution of the late twentieth century changed computing from a specialized tool used by institutions into something accessible to ordinary individuals. Companies introduced affordable machines for homes and small businesses, accompanied by user-friendly operating systems and software applications. This shift was accompanied by the growth of programming languages, which made it easier for developers to
+
+--- Chunk 5 (100 words) ---
+and software applications. This shift was accompanied by the growth of programming languages, which made it easier for developers to write software without needing deep knowledge of hardware architecture. Graphical user interfaces further lowered the barrier to entry, enabling people without technical training to use computers for tasks such as word processing, spreadsheets, and games. The emergence of the internet in the final decades of the twentieth century connected computers across the globe, enabling instantaneous communication and the exchange of information on a scale never before possible. This connectivity gave rise to the World Wide Web, search engines, and eventually
+
+--- Chunk 6 (100 words) ---
+information on a scale never before possible. This connectivity gave rise to the World Wide Web, search engines, and eventually social media platforms that reshaped how people communicate, work, and access information. Mobile computing, powered by smartphones and tablets, extended these capabilities beyond the desktop, placing powerful computing devices in the pockets of billions of people worldwide. In recent years, the field has been shaped by advances in artificial intelligence and machine learning, which allow computers to recognize patterns, make predictions, and generate content in ways that were previously thought to require human intelligence. Cloud computing has allowed organizations to
+
+--- Chunk 7 (64 words) ---
+predictions, and generate content in ways that were previously thought to require human intelligence. Cloud computing has allowed organizations to access vast computing resources without owning physical hardware, while advances in specialized processors have accelerated the training of large-scale models. As computing continues to evolve, it remains deeply intertwined with nearly every aspect of modern society, from communication and commerce to science and entertainment.
+
+======================================================================
+TASK 2: Privacy policy chunking (chunk_size=100, overlap=20)
+======================================================================
+Total chunks produced: 4
+
+--- Chunk 1 (100 words) ---
+We collect information you provide directly to us when you create an account, update your profile, place an order, or otherwise communicate with us. This may include your name, email address, phone number, delivery address, payment details, and any other information you choose to share. We also automatically collect certain information when you use our app, such as your device type, operating system, IP address, location data, and how you interact with our services. This information helps us understand usage patterns and improve the overall experience for all users. We use the information we collect to provide, maintain, and improve
+
+--- Chunk 2 (100 words) ---
+patterns and improve the overall experience for all users. We use the information we collect to provide, maintain, and improve our services, process transactions, send order updates, personalize content and recommendations, and communicate with you about promotions, new features, or policy changes. We may also use your data to detect and prevent fraud, enforce our terms of service, and comply with legal obligations. In some cases, we combine information from different sources to build a more complete picture of how our services are used, which allows us to make better decisions about product design and customer support. We may share
+
+--- Chunk 3 (100 words) ---
+our services are used, which allows us to make better decisions about product design and customer support. We may share your information with delivery partners, restaurant partners, payment processors, and other third-party service providers who help us operate our platform. These partners are contractually obligated to protect your data and use it only for the purposes we specify. We do not sell your personal information to advertisers. However, we may share aggregated or anonymized data with business partners for analytics and marketing purposes. You have the right to access, correct, or delete your personal information at any time by contacting
+
+======================================================================
+TASK 3: Sentence embeddings (all-MiniLM-L6-v2)
+======================================================================
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|██████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 2652.55it/s]
+Sentence: 'The pizza was amazing'
+Embedding shape: (384,)
+Embedding (first 10 dims): [-0.12786426  0.12176867 -0.00084106  0.06961904 -0.07192162 -0.00479645
+ -0.00092368  0.03084923 -0.00585592 -0.10486355]
+
+Sentence: 'Service was slow'
+Embedding shape: (384,)
+Embedding (first 10 dims): [ 0.01129963  0.01351379 -0.009922   -0.028049    0.02720465 -0.1028849
+ -0.01498418 -0.06984063  0.04691125  0.0274689 ]
+
+
+======================================================================
+TASK 3: Sentence embeddings (all-MiniLM-L6-v2)
+======================================================================
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|██████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 2652.55it/s] 
+Sentence: 'The pizza was amazing'
+Embedding shape: (384,)
+Embedding (first 10 dims): [-0.12786426  0.12176867 -0.00084106  0.06961904 -0.07192162 -0.00479645
+ -0.00092368  0.03084923 -0.00585592 -0.10486355]
+
+Sentence: 'Service was slow'
+Embedding shape: (384,)
+Embedding (first 10 dims): [ 0.01129963  0.01351379 -0.009922   -0.028049    0.02720465 -0.1028849
+ -0.01498418 -0.06984063  0.04691125  0.0274689 ]
+
+======================================================================
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|██████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 2652.55it/s] 
+Sentence: 'The pizza was amazing'
+Embedding shape: (384,)
+Embedding (first 10 dims): [-0.12786426  0.12176867 -0.00084106  0.06961904 -0.07192162 -0.00479645
+ -0.00092368  0.03084923 -0.00585592 -0.10486355]
+
+Sentence: 'Service was slow'
+Embedding shape: (384,)
+Embedding (first 10 dims): [ 0.01129963  0.01351379 -0.009922   -0.028049    0.02720465 -0.1028849
+ -0.01498418 -0.06984063  0.04691125  0.0274689 ]
+
+Loading weights: 100%|██████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 2652.55it/s] 
+Sentence: 'The pizza was amazing'
+Embedding shape: (384,)
+Embedding (first 10 dims): [-0.12786426  0.12176867 -0.00084106  0.06961904 -0.07192162 -0.00479645
+ -0.00092368  0.03084923 -0.00585592 -0.10486355]
+
+Sentence: 'Service was slow'
+Embedding shape: (384,)
+Embedding (first 10 dims): [ 0.01129963  0.01351379 -0.009922   -0.028049    0.02720465 -0.1028849
+ -0.01498418 -0.06984063  0.04691125  0.0274689 ]
+
+Embedding (first 10 dims): [-0.12786426  0.12176867 -0.00084106  0.06961904 -0.07192162 -0.00479645
+ -0.00092368  0.03084923 -0.00585592 -0.10486355]
+
+Sentence: 'Service was slow'
+Embedding shape: (384,)
+Embedding (first 10 dims): [ 0.01129963  0.01351379 -0.009922   -0.028049    0.02720465 -0.1028849
+ -0.01498418 -0.06984063  0.04691125  0.0274689 ]
+
+Sentence: 'Service was slow'
+Embedding shape: (384,)
+Embedding (first 10 dims): [ 0.01129963  0.01351379 -0.009922   -0.028049    0.02720465 -0.1028849
+ -0.01498418 -0.06984063  0.04691125  0.0274689 ]
+
+Embedding (first 10 dims): [ 0.01129963  0.01351379 -0.009922   -0.028049    0.02720465 -0.1028849
+ -0.01498418 -0.06984063  0.04691125  0.0274689 ]
+
+
+Sentence: 'Loved the ambience'
+Embedding shape: (384,)
+Embedding (first 10 dims): [-0.0121183   0.04961683  0.04307314  0.04374345  0.03965997 -0.02015314
+  0.04435144 -0.02433846  0.02611977 -0.00524062]
+
+======================================================================
+TASK 4: Cosine similarity between two burger sentences
+======================================================================
+Sentence A: 'The burger was delicious'
+Sentence B: 'I enjoyed the burger a lot'
+Cosine similarity: 0.8223
+
+Interpretation: High similarity — the two sentences are semantically close. Even though they use different words ('delicious' vs. 'enjoyed ... a lot'), the model captures that both express positive sentiment about the same subject (the burger).      
+PS C:\Users\disha\RAG\Assignment\Session 2> 
+

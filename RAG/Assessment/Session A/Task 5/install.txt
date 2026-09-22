@@ -1,0 +1,3 @@
+pip install pypdf anthropic --break-system-packages
+python menu_chunker.py                  # runs the demo on sample menu text
+python menu_chunker.py path/to/menu.pdf  # runs on a real menu PDF

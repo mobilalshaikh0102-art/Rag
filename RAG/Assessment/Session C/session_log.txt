@@ -1,0 +1,8 @@
+[2026-09-14 15:22:54] MODE: RAG
+QUERY: what is the refund policy for missing items?
+OUTPUT: [Simulated Answer] (This is where the LLM's response would appear.)
+------------------------------------------------------------
+[2026-09-14 15:23:17] MODE: Classify
+QUERY: My order showed up 50 minutes late and the driver didn't answer calls.
+OUTPUT: Predicted=Late Delivery; ClosestExample=My food arrived almost an hour after the promised time.
+------------------------------------------------------------

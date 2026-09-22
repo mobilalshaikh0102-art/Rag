@@ -1,0 +1,35 @@
+run: python route_sequencer.py
+
+
+PS C:\Users\disha\RAG\Assessment\Session A\Task 3> python route_sequencer.py
+[MOCK MODE] Running route sequencer with simulated Chain-of-Thought reasoning...
+
+=== REASONING ===
+Step 1: High-priority orders and traffic delays:
+- Order 1 (12 Elm St): 15 min delay
+- Order 4 (301 Maple Dr): 2 min delay
+
+Step 2: Medium and Low priority orders and traffic delays:
+- Order 2 (48 Oak Ave): Low priority, 5 min delay
+- Order 3 (7 Pine Rd): Medium priority, 20 min delay
+- Order 5 (88 Cedar Ln): Low priority, 10 min delay
+
+Step 3: Priority vs. Traffic Delay Reasoning:
+- Evaluated high-priority orders first to meet strict delivery commitments.
+- Prioritized stops with lower traffic delays within each priority class to prevent transit bottlenecks.
+- Sequenced medium and low priority stops to balance route efficiency and avoid severe traffic delays early on.
+
+Step 4: Tentative delivery sequence:
+4 -> 1 -> 3 -> 2 -> 5
+
+Step 5: Conflict check and revision:
+- Confirmed all high-priority orders are handled ahead of lower-priority stops.
+- Verified that stops with lowest delays are visited first where feasible.
+- No sequence conflicts found.
+
+=== FINAL SEQUENCE (order numbers) ===
+[4, 1, 3, 2, 5]
+
+=== JUSTIFICATION ===
+High-priority orders are prioritized first (starting with minimal traffic delay), followed by medium and low priority stops sequenced to optimize total travel time.
+PS C:\Users\disha\RAG\Assessment\Session A\Task 3> 

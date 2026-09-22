@@ -1,0 +1,20 @@
+[
+  {
+    "complaint_id": "c1",
+    "predicted_category": "Late Delivery",
+    "confidence": 0.94,
+    "reasoning": "Customer reports significant delivery delay or waiting time."
+  },
+  {
+    "complaint_id": "c2",
+    "predicted_category": "Wrong Item",
+    "confidence": 0.92,
+    "reasoning": "Customer received an incorrect item instead of what was ordered."
+  },
+  {
+    "complaint_id": "c3",
+    "predicted_category": "Missing Item",
+    "confidence": 0.93,
+    "reasoning": "One or more items from the customer order are missing."
+  }
+]

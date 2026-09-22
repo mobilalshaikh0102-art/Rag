@@ -1,0 +1,28 @@
+run: python policy_rag.py
+
+
+
+PS C:\Users\disha\RAG\Assessment\Session A\Task 4> python policy_rag.py
+======================================================================
+NOTICE: No valid ANTHROPIC_API_KEY found.
+Automatically running in MOCK MODE to demonstrate RAG retrieval.
+To use the live Anthropic Claude API:
+  - PowerShell: $env:ANTHROPIC_API_KEY="sk-ant-..."
+  - Linux/Mac:  export ANTHROPIC_API_KEY="sk-ant-..."
+======================================================================
+
+Mode: Mock / Offline Mode
+Question: How long do I have to file a dispute about my payout?
+
+[Mock LLM Response - Offline / Demo Mode]
+
+Answer based on Section 7: Dispute Resolution:
+Partners may file a dispute within 7 days of a delivery via the app's Help Center. Disputes regarding payout amount are reviewed within 3 business days. Disputes regarding SLA penalty deductions require supporting evidence such as GPS logs or timestamps.
+
+All Relevant Retrieved Sections:
+- [Section 7: Dispute Resolution] Partners may file a dispute within 7 days of a delivery via the app's Help Center. Disputes regarding payout amount are reviewed within 3 business days. Disputes regarding SLA penalty deductions require supporting evidence such as GPS logs or timestamps.
+
+- [Section 2: Payout Rules] Delivery partners are paid weekly on Fridays for all completed deliveries from the prior Monday through Sunday. Payouts include base fare, distance pay, and any applicable peak-hour bonuses. Disputed deliveries are held from payout until resolved, typically within 5 business days.
+
+Sources Cited: Section 7: Dispute Resolution, Section 2: Payout Rules
+PS C:\Users\disha\RAG\Assessment\Session A\Task 4> 

@@ -1,0 +1,42 @@
+run: python faiss_complaint_retrieval.py
+
+::::::: PS C:\Users\disha\RAG\Assessment\Session A\Task 6> python faiss_complaint_retrieval.py
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|██████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 2388.40it/s]
+C:\Users\disha\RAG\Assessment\Session A\Task 6\faiss_complaint_retrieval.py:16: FutureWarning: The `get_sentence_embedding_dimension` method has been renamed to `get_embedding_dimension`.
+  dim = model.get_sentence_embedding_dimension()
+Before resolving complaint 1:
+   (1, 'Order arrived cold and 40 minutes late', 0.9553070068359375)
+   (3, 'Delivery partner was rude to customer', 1.7383543252944946)
+   (2, 'Wrong item delivered, refund requested', 1.8866581916809082)
+Removed complaint 1 from index.
+
+After resolving complaint 1:
+   (3, 'Delivery partner was rude to customer', 1.7383543252944946)
+   (2, 'Wrong item delivered, refund requested', 1.8866581916809082)
+PS C:\Users\disha\RAG\Assessment\Session A\Task 6> 
+
+
+
+
+
+run: python chromadb_complaint_retrieval.py
+
+
+PS C:\Users\disha\RAG\Assessment\Session A\Task 6> python chromadb_complaint_retrieval.py
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|██████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 2587.09it/s]
+Before resolving complaint c1:
+   ('c1', 'Order arrived cold and 40 minutes late', 0.4776536226272583)
+   ('c3', 'Delivery partner was rude to customer', 0.8691771030426025)
+   ('c2', 'Wrong item delivered, refund requested', 0.9433291554450989)
+Removed complaint c1 from index.
+
+After resolving complaint c1:
+   ('c3', 'Delivery partner was rude to customer', 0.8691771030426025)
+   ('c2', 'Wrong item delivered, refund requested', 0.9433291554450989)
+PS C:\Users\disha\RAG\Assessment\Session A\Task 6> 
+
+
+
+

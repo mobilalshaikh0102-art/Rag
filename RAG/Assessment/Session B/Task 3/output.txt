@@ -1,0 +1,20 @@
+Run: python faq_semantic_search.py
+
+PS C:\Users\disha\RAG\Assessment\Session B\Task 3> python faq_semantic_search.py
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|██████████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 1680.75it/s]
+FAISS index built successfully. Total vectors: 6 (matches 6 FAQs)
+
+Query: 'How do I get my money back?'
+  1. (distance=1.0563) You can cancel your order within 5 minutes of placing it for a full refund.
+  2. (distance=1.0930) Refund policy: eligible refunds are processed within 5-7 business days to your original payment method.
+
+Query: 'How long will my food take to arrive?'
+  1. (distance=0.6697) Standard delivery time is 30-45 minutes depending on your location and restaurant load.
+  2. (distance=1.4244) You can cancel your order within 5 minutes of placing it for a full refund.
+
+Query: 'Can I talk to a real person about my order?'
+  1. (distance=0.9689) To track your order in real time, open the 'My Orders' section and tap on the active order.
+  2. (distance=1.1819) You can cancel your order within 5 minutes of placing it for a full refund.
+
+PS C:\Users\disha\RAG\Assessment\Session B\Task 3> 

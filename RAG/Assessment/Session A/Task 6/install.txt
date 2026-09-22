@@ -1,0 +1,5 @@
+pip install faiss-cpu
+
+pip install chromadb
+
+pip install sentence-transformers
